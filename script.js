@@ -2,17 +2,22 @@ button = document.getElementById('bt')
 
 button.onclick = () => {
     input = document.getElementById('value')
-    value = input.value
+    let value = input.value
     value.replace(',', '.')
     value = Number(value)
 
     value = value + (value * 0.6)
-    value = Math.round(value)
+
+    let valueRounded = Math.round(value)
     value = value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    valueRounded = valueRounded.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
+    console.log(value, valueRounded)
     
-    div = document.getElementById('cont')
-    console.log(div);
+    div = document.getElementsByClassName('price')
 
-    div.innerText = `Valor do produto = ${value}`
+    div[0].innerHTML = `valor exato: <span>${value}</span>`
+    div[1].innerHTML = `valor inteiro: <span>${valueRounded}</span>`
+
+    console.log(div[0].innerHTML);
 }
