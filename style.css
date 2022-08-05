@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 1.6rem;
     padding: 12px;
 }
 
@@ -34,22 +34,20 @@ h1 {
 }
 
 button {
-    padding: 14px 40px;
+    padding: 14px 50px;
     border: 0;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 600;
     border-radius: 8px;
-    background-color: #8257e5;
     cursor: pointer;
     color: white;
 
-    margin-top: 36px;
-}
-button:hover {
-    transition: 0.3s;
-    background-color: #5c19f8;
-}
+    background: rgb(13,27,145);
+    background: linear-gradient(90deg, rgba(13,27,145,1) 0%, rgba(20,164,155,1) 36%, rgba(29,143,166,1) 85%);
 
+    margin-top: 36px;
+    transition: 0.3s;
+}
 #cont {
 
     margin-top: 50px;
@@ -72,7 +70,8 @@ button:hover {
     display: flex;
 
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+    
 }
 
 #title > img {

@@ -16,8 +16,12 @@ button.onclick = () => {
     
     div = document.getElementsByClassName('price')
 
-    div[0].innerHTML = `valor exato: <span>${value}</span>`
-    div[1].innerHTML = `valor inteiro: <span>${valueRounded}</span>`
-
-    console.log(div[0].innerHTML);
+    div[0].innerHTML = `Valor exato: <span>${value}</span>`
+    div[1].innerHTML = `Valor inteiro: <span>${valueRounded}</span>`
 }
+
+document.addEventListener('keydown', (event) => {
+    if (event.code == 'Enter') {
+        button.click()
+    }
+})
