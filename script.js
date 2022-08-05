@@ -21,7 +21,9 @@ button.onclick = () => {
 }
 
 document.addEventListener('keydown', (event) => {
-    if (event.code == 'Enter') {
+    if (event.code == 'Enter' || event.code == 'NumpadEnter') {
         button.click()
     }
+
+    console.log(event.code);
 })
